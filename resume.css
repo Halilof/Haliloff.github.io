@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2 {
+   	font-family: 'Source Code Pro', monospace;
+    font-weight: 10; /* Средний (полужирный) шрифт */
+    color: #4a4a4a; /* Темно-серый цвет */
+    font-size: 38px; /* Размер шрифта (по желанию можно скорректировать) */
+    line-height: 1; /* Увеличенное межстрочное расстояние для удобочитаемости */
+    margin-bottom: 20px; /* Отступ снизу для всех абзацев */
+	text-align: center;
+}
+h3 {
+    font-family: 'Century Gothic', sans-serif; /* Задаем шрифт Century Gothic */
+    font-weight: 500; /* Средний (полужирный) шрифт */
+    color: #4a4a4a; /* Темно-серый цвет */
+    font-size: 38px; /* Размер шрифта (по желанию можно скорректировать) */
+    line-height: 1.6; /* Увеличенное межстрочное расстояние для удобочитаемости */
+    margin-bottom: 20px; /* Отступ снизу для всех абзацев */
+}
+p {
+    font-family: 'Century Gothic', sans-serif; /* Задаем шрифт Century Gothic */
+    font-weight: 600; /* Средний (полужирный) шрифт */
+    color: #4a4a4a; /* Темно-серый цвет */
+    font-size: 20px; /* Размер шрифта (по желанию можно скорректировать) */
+    line-height: 1.6; /* Увеличенное межстрочное расстояние для удобочитаемости */
+    margin-bottom: 20px; /* Отступ снизу для всех абзацев */
+}
+ul li {
+  font-family: 'Century Gothic', sans-serif; /* Задаем шрифт Century Gothic */
+    font-weight: 600; /* Средний (полужирный) шрифт */
+    color: #4a4a4a; /* Темно-серый цвет */
+    font-size: 20px; /* Размер шрифта (по желанию можно скорректировать) */
+    line-height: 1.6; /* Увеличенное межстрочное расстояние для удобочитаемости */
+    margin-bottom: 20px; /* Отступ снизу для всех абзацев */
+	margin-left: 40px; /* Отступ снизу для всех абзацев */
+}
+body {
+    font-family: 'Century Gothic', 'Source Code Pro', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Верхнее меню */
+header {
+    background-color: white;
+    color: #333;
+    border-bottom: 1px solid #dcdcdc;
+    border-top: 1px solid #dcdcdc;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+header.hidden {
+    transform: translateY(-100%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 1% 5%;
+}
+
+nav ul li a {
+    font-family: 'Source Code Pro', monospace;
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #A25A0A;
+}
+
+/* Стиль ФИО лесенкой */
+.header-name {
+    position: relative;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 300;
+    font-size: 5vw; /* Размер шрифта зависит от ширины окна */
+    line-height: 1.2;
+    margin: 0;
+    padding-top: 10px; /* Добавляем отступ сверху для каждой строки */
+    text-align: left;
+}
+.name-layer {
+    position: absolute;
+    top: -70px;
+    left: 0;
+    font-weight: 150;
+}
+
+.layer1 {
+    left: 0;
+    top: 110;
+}
+
+.layer2 {
+    left: 0.5%; /* Смещение вправо */
+    top: -70px;  /* Смещение вниз */
+}
+
+.header-name:nth-child(2) {
+    margin-left:20vw; /* Смещение для второго блока (Алмаз) */
+	margin-top: 5vw; /* Смещение для второго блока (Алмаз) */
+}
+
+.header-name:nth-child(3) {
+    margin-left: 40vw; /* Смещение для третьего блока (Рамилевич) */
+	margin-top: 5vw; /* Смещение для третьего блока (Рамилевич) */
+}
+
+blockquote {
+    margin: 90px 0;
+}
+
+section {
+    margin: 130px 0;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#intro img {
+    width: 100%;
+    height: auto;
+}
+
+.qr-codes {
+        display: flex;
+    justify-content: center;  /* Центрируем все элементы по горизонтали */
+    align-items: center;      /* Центрируем элементы по вертикали */
+    gap: 0;                   /* Убираем промежутки между элементами */
+}
+
+.qr-codes div {
+    text-align: center;
+}
+
+.qr-codes img {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+.decor-image img {
+    height: 150px;            /* Высота равная высоте QR-кодов */
+    width: auto;              /* Ширина будет автоматически изменяться для сохранения пропорций */
+    margin: 0 10px;           /* Отступы по бокам для декоративного изображения */
+}
+.skills-image {
+    display: inline-block; /* Делаем изображение строчным, чтобы оно не ломало структуру текста */
+    vertical-align: middle; /* Выравниваем изображение по середине текста */
+    max-width: 450px; /* Устанавливаем минимальный размер изображения */
+    height: auto; /* Сохраняем пропорции изображения */
+    margin-right: 150px; /* Отступ от текста */
+    margin-bottom: 510px; /* Отступ от текста */
+    float: right; /* Перемещаем изображение вправо */
+}
+#contact {
+    border-top: 3px solid #333;   /* Серая линия сверху */
+    border-bottom: 3px solid #333; /* Сервая линия снизу */
+    padding: 30px 0 100px;                  /* Отступы сверху и снизу для секции */
+}
+/* Адаптивная верстка */
+@media (max-width: 1061px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .qr-codes {
+        flex-direction: column;
+    }
+
+    .qr-codes div {
+        margin-bottom: 20px;
+    }
+}
